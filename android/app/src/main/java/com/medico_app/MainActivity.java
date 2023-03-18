@@ -1,4 +1,4 @@
-package com.medico;
+package com.medico_app;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
@@ -13,7 +13,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "medico";
+    return "medico_app";
   }
 
   /**

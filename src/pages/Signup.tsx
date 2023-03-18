@@ -10,7 +10,10 @@ import {
 } from 'react-native';
 import Svg, {Ellipse} from 'react-native-svg';
 
-function Signup(props) {
+const Signup = ({navigation}: any) => {
+  const handleRouteDashboard = () => {
+    navigation.navigate('Dashboard');
+  };
   return (
     <View style={styles.container}>
       <View style={styles.ellipseStackStack}>
@@ -32,7 +35,7 @@ function Signup(props) {
             style={styles.image}
           />
         </View>
-        <TouchableOpacity style={styles.button1}>
+        <TouchableOpacity style={styles.button1} onPress={handleRouteDashboard}>
           <Text style={styles.signUp}>Sign Up</Text>
         </TouchableOpacity>
       </View>
@@ -86,7 +89,7 @@ function Signup(props) {
       </View>
     </View>
   );
-}
+};
 
 const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
