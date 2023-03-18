@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "name": "Dr. John Doe",
+    "specialty": "Cardiologist"
+  },
+  {
+    "id": "2",
+    "name": "Dr. Jane Smith",
+    "specialty": "Dermatologist"
+  },
+  {
+    "id": "3",
+    "name": "Dr. Peter Parker",
+    "specialty": "Neurologist"
+  },
+  {
+    "id": "4",
+    "name": "Dr. Susan Lee",
+    "specialty": "Ophthalmologist"
+  }
+]

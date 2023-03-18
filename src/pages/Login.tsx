@@ -1,15 +1,18 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {
-  StyleSheet,
-  View,
+  Dimensions,
   Image,
+  StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
-  Dimensions,
+  View,
 } from 'react-native';
 
-function Login(props) {
+const Login = ({navigation}: any) => {
+  const handleRouteDashboard = () => {
+    navigation.navigate('Dashboard');
+  };
   return (
     <View style={styles.container}>
       <View style={styles.rectStack}>
@@ -24,20 +27,20 @@ function Login(props) {
         <Text style={styles.signIn}>Sign In</Text>
         <View style={styles.group2}>
           <TextInput
-            placeholder="     Enter Your Phone Number"
+            placeholder="Enter Your Phone Number"
             returnKeyType="next"
             inlineImagePadding={0}
             autoFocus={true}
             style={styles.textInput}
           />
           <TextInput
-            placeholder="     Enter Your Password"
+            placeholder="Enter Your Password"
             secureTextEntry={true}
             style={styles.textInput1}
           />
           <View style={styles.group1}>
             <TouchableOpacity
-              onPress={() => props.navigation.navigate('Welcome')}
+              onPress={handleRouteDashboard}
               style={styles.button1}>
               <Text style={styles.text2}>Login</Text>
             </TouchableOpacity>
@@ -46,8 +49,7 @@ function Login(props) {
       </View>
     </View>
   );
-}
-
+};
 const width = Dimensions.get('window').width.valueOf();
 const height = Dimensions.get('window').height.valueOf();
 
